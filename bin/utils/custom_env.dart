@@ -7,7 +7,6 @@ class CustomEnv {
 
   static Future<Type> get<Type>({required String key}) async {
     if (_map.isEmpty) await _load();
-    // return _map[key];
     return _map[key]!.toType(Type);
   }
 
